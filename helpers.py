@@ -26,11 +26,8 @@ def hh_login(driver, password, login):
 
 
 def find_with_filters(driver, search_url):
-    print(f'\n-----GOO TO PAGE-----\n')
-    print(f'\n"{search_url}"\n')
     driver.get("https://dzen.ru/")
     driver.get(search_url)
-    print(f'\n-----Cant go to the page-----\n')
     return driver
 
 
