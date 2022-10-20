@@ -7,13 +7,13 @@ from helpers import hh_login, find_with_filters, apply
 from selenium_class import SeleniumWith
 
 
-def main(args):
-    password = args.password
-    login = args.login
-    search_url = args.search_url
-    letter_path = args.letter_path
+def main():
+    login = input('Login:')
+    password = input('Password:')
+    search_url = input('Search url:')
+    letter_path = input('Letter path, just press enter if no letter:')
     
-    if letter_path is not None:
+    if letter_path != '':
         with open(letter_path, 'r') as file:
             covering_letter = file.read()
     else:
@@ -35,11 +35,5 @@ def main(args):
     
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Agrs for programm')
-    parser.add_argument('-password', dest='password', help='Password from hh.ru')
-    parser.add_argument('-login', dest='login', help='Email or phone from hh.ru')
-    parser.add_argument('-letter_path', dest='letter_path', default=None, help='Path to covering letter')
-    parser.add_argument('-search_url', dest='search_url', help='Search string')
-    args = parser.parse_args()
-    main(args)
+    main()
     
