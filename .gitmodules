@@ -1,0 +1,3 @@
+[submodule "test_submodule/picture_service"]
+	path = test_submodule/picture_service
+	url = git@github.com:Ivannerad/picture_service.git
